@@ -14,7 +14,7 @@ export default function RegisterPage() {
     try {
       const res = await register({ name, email, password });
       setToken(res.token);
-      navigate("/");
+      navigate("/schedulepage");
     } catch (error) {
       setErr(error.response?.data?.error || "Register failed");
     }

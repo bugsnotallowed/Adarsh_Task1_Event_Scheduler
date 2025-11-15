@@ -13,7 +13,7 @@ export default function LoginPage() {
     try {
       const res = await login({ email, password });
       setToken(res.token);
-      navigate("/");
+      navigate("/schedulepage");
     } catch (error) {
       setErr(error.response?.data?.error || "Login failed");
     }
